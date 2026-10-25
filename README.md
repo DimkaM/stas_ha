@@ -86,6 +86,7 @@ SerialNumber `5B14142211`; под Windows — виртуальный `COMx`.
 # Windows
 pio run -t upload
 pio device monitor -b 115200
+
 ```
 
 Перед сборкой:
