@@ -1,0 +1,32 @@
+{
+  "idf.currentSetup": "C:\\Users\\User\\esp\\v6.0\\esp-idf",
+  "C_Cpp.intelliSenseEngine": "default",
+  "idf.adapterTargetName": "esp32c3",
+  "idf.flashType": "UART",
+  "idf.flashBaudRate": "921600",
+  "idf.portWin": "COM6",
+  "idf.espIdfPathWin": "C:\\Users\\User\\esp\\v6.0\\esp-idf",
+  "idf.toolsPathWin": "C:\\Users\\User\\.espressif",
+  "idf.pythonBinPathWin": "C:\\Users\\User\\.espressif\\python_env\\idf6.0_py3.11_env\\Scripts\\python.exe",
+  "idf.pythonInstallPath": "C:\\Users\\User\\.espressif\\tools\\idf-python\\3.11.2\\python.exe",
+  "idf.customExtraPaths": "C:\\Users\\User\\.espressif\\tools\\ccache\\4.12.1;C:\\Users\\User\\.espressif\\tools\\cmake\\4.0.3\\bin;C:\\Users\\User\\.espressif\\tools\\dfu-util\\0.11;C:\\Users\\User\\.espressif\\tools\\esp-clang\\esp-20.1.1_20250829\\esp-clang\\bin;C:\\Users\\User\\.espressif\\tools\\esp32ulp-elf\\2.38_20240113\\esp32ulp-elf\\bin;C:\\Users\\User\\.espressif\\tools\\idf-exe\\1.0.3;C:\\Users\\User\\.espressif\\tools\\idf-git\\2.39.2;C:\\Users\\User\\.espressif\\tools\\ninja\\1.12.1;C:\\Users\\User\\.espressif\\tools\\openocd-esp32\\v0.12.0-esp32-20250707\\openocd-esp32\\bin;C:\\Users\\User\\.espressif\\tools\\riscv32-esp-elf\\esp-15.2.0_20250929\\riscv32-esp-elf\\bin;C:\\Users\\User\\.espressif\\tools\\riscv32-esp-elf-gdb\\16.3_20250913\\riscv32-esp-elf-gdb\\bin;C:\\Users\\User\\.espressif\\tools\\xtensa-esp-elf\\esp-15.2.0_20250929\\xtensa-esp-elf\\bin;C:\\Users\\User\\.espressif\\tools\\xtensa-esp-elf-gdb\\16.3_20250913\\xtensa-esp-elf-gdb\\bin;C:\\Users\\User\\.espressif\\tools\\esp-rom-elfs\\20241011",
+  "idf.customExtraVars": {
+    "IDF_CCACHE_ENABLE": "1",
+    "ESP_ROM_ELF_DIR": "C:\\Users\\User\\.espressif\\tools\\esp-rom-elfs\\20241011/",
+    "OPENOCD_SCRIPTS": "C:\\Users\\User\\.espressif\\tools\\openocd-esp32\\v0.12.0-esp32-20250707/openocd-esp32/share/openocd/scripts"
+  },
+  "idf.openOcdConfigs": [
+    "board/esp32c3-builtin.cfg"
+  ],
+  "cmake.configureOnOpen": false,
+  "files.associations": {
+    "sdkconfig.h": "c"
+  },
+  "clangd.path": "C:\\Users\\User\\.espressif\\tools\\esp-clang\\esp-20.1.1_20250829\\esp-clang\\bin\\clangd.exe",
+  "clangd.arguments": [
+    "--background-index",
+    "--query-driver=**",
+    "--compile-commands-dir=d:\\src\\stas_ha/build"
+  ],
+  "idf.port": "COM6"
+}

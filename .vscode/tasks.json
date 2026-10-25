@@ -1,0 +1,106 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "ESP-IDF: Build",
+      "type": "shell",
+      "command": "${config:idf.pythonBinPathWin} ${config:idf.espIdfPathWin}\\tools\\idf.py build",
+      "options": {
+        "env": {
+          "PATH": "${env:PATH};${config:idf.customExtraPaths}"
+        }
+      },
+      "problemMatcher": {
+        "owner": "cpp",
+        "fileLocation": ["autoDetect", "${workspaceFolder}"],
+        "pattern": {
+          "regexp": "^(.*?):(\\d+):(\\d*):?\\s+(?:fatal\\s+)?(warning|error):\\s+(.*)$",
+          "file": 1,
+          "line": 2,
+          "column": 3,
+          "severity": 4,
+          "message": 5
+        }
+      },
+      "group": { "kind": "build", "isDefault": true }
+    },
+    {
+      "label": "ESP-IDF: Set target (esp32c3)",
+      "type": "shell",
+      "command": "${config:idf.pythonBinPathWin} ${config:idf.espIdfPathWin}\\tools\\idf.py set-target esp32c3",
+      "options": {
+        "env": {
+          "PATH": "${env:PATH};${config:idf.customExtraPaths}"
+        }
+      }
+    },
+    {
+      "label": "ESP-IDF: Full clean",
+      "type": "shell",
+      "command": "${config:idf.pythonBinPathWin} ${config:idf.espIdfPathWin}\\tools\\idf.py fullclean",
+      "options": {
+        "env": {
+          "PATH": "${env:PATH};${config:idf.customExtraPaths}"
+        }
+      }
+    },
+    {
+      "label": "ESP-IDF: Flash",
+      "type": "shell",
+      "command": "${config:idf.pythonBinPathWin} ${config:idf.espIdfPathWin}\\tools\\idf.py -p ${config:idf.portWin} -b ${config:idf.flashBaudRate} flash",
+      "options": {
+        "env": {
+          "PATH": "${env:PATH};${config:idf.customExtraPaths}"
+        }
+      }
+    },
+    {
+      "label": "ESP-IDF: Monitor",
+      "type": "shell",
+      "command": "${config:idf.pythonBinPathWin} ${config:idf.espIdfPathWin}\\tools\\idf.py -p ${config:idf.portWin} monitor",
+      "options": {
+        "env": {
+          "PATH": "${env:PATH};${config:idf.customExtraPaths}"
+        }
+      },
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "ESP-IDF: Flash + Monitor",
+      "dependsOrder": "sequence",
+      "dependsOn": ["ESP-IDF: Flash", "ESP-IDF: Monitor"],
+      "problemMatcher": []
+    },
+    {
+      "label": "ESP-IDF: Erase flash",
+      "type": "shell",
+      "command": "${config:idf.pythonBinPathWin} ${config:idf.espIdfPathWin}\\tools\\idf.py -p ${config:idf.portWin} erase-flash",
+      "options": {
+        "env": {
+          "PATH": "${env:PATH};${config:idf.customExtraPaths}"
+        }
+      }
+    },
+    {
+      "label": "ESP-IDF: Menuconfig",
+      "type": "shell",
+      "command": "${config:idf.pythonBinPathWin} ${config:idf.espIdfPathWin}\\tools\\idf.py menuconfig",
+      "options": {
+        "env": {
+          "PATH": "${env:PATH};${config:idf.customExtraPaths}"
+        }
+      }
+    },
+    {
+      "label": "ESP-IDF: Size",
+      "type": "shell",
+      "command": "${config:idf.pythonBinPathWin} ${config:idf.espIdfPathWin}\\tools\\idf.py size",
+      "options": {
+        "env": {
+          "PATH": "${env:PATH};${config:idf.customExtraPaths}"
+        }
+      }
+    }
+  ]
+}

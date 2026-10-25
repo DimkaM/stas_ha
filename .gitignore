@@ -1,18 +1,25 @@
-# PlatformIO
-.pio
-.pioenvs
-.piolibdeps
-.vscode/.browse.c_cpp.db*
+# ESP-IDF build output
+build/
+sdkconfig
+sdkconfig.old
+managed_components/
+dependencies.lock
+
+# VS Code generated files
 .vscode/c_cpp_properties.json
 .vscode/launch.json
 .vscode/ipch
-
-# Local toolchain (installed with pip --target, see pio.sh)
-.piotools
-.venv
+.vscode/.browse.c_cpp.db*
 
 # Secrets
-include/secrets.h
+main/secrets.h
+
+# Legacy PlatformIO leftovers (safety net, files removed)
+.pio
+
+# OS
+.DS_Store
+
 
 # OS
 .DS_Store

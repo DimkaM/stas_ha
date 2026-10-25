@@ -1,11 +1,7 @@
-#pragma once
-
-#include <cstdint>
-
 // ---------------------------------------------------------------------------
 //  stas_ha pressure node - hardware configuration
 //
-//  ESP32-C3 (USB-UART bridge -> /dev/ttyACM0)
+//  ESP32-C3 (USB-UART bridge CH343 -> COM6)
 //     |
 //     +-- I2C --> ADS1115 (addr 0x48, ADDR -> GND), VDD = 3V3
 //     |            A0 <- voltage divider <- pressure sensor OUT
@@ -13,6 +9,9 @@
 //     |
 //     +-- 5V supply for the pressure sensor (GND common with ESP32 and ADS1115)
 // ---------------------------------------------------------------------------
+#pragma once
+
+#include <cstdint>
 
 // ---------------------------------------------------------------- I2C / ADC
 // ESP32-C3 free GPIOs: not strapping, not flash, not USB.
@@ -48,6 +47,7 @@ constexpr uint32_t I2C_RETRY_MS = 10000;
 // --------------------------------------------------------------- MQTT / device
 #define NODE_ID "stas_ha_pressure"
 #define DEVICE_NAME "stas_ha pressure"
+#define FW_VERSION "2.0.0"
 #define TOPIC_STATE "stas_ha/pressure/state"
 #define TOPIC_AVAIL "stas_ha/pressure/availability"
 #define TOPIC_CMD "stas_ha/pressure/cmd"
