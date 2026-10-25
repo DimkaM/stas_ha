@@ -41,10 +41,10 @@ stas_ha/
 | Параметр | Значение |
 |---|---|
 | env | `esp32c3` (default) |
-| platform | `espressif32` |
+| platform | `espressif32@^6.9.0` (запинена, Arduino core 2.x) |
 | board | `esp32-c3-devkitm-1` |
 | framework | `arduino` |
-| upload_port / monitor_port | `/dev/ttyACM0` (Linux), на Windows будет `COMx` |
+| upload_port / monitor_port | автоопределение (закомментированы); при необходимости `/dev/ttyACM0` (Linux) или `COMx` (Windows) |
 | monitor_speed | 115200 |
 | build_flags | `-std=gnu++17 -Wall -Wextra -DCORE_DEBUG_LEVEL=1` |
 
@@ -237,6 +237,7 @@ python3 -m pip install --break-system-packages --target .piotools "platformio>=6
 | Нет `python3-venv` / `ensurepip` | `python3 -m venv` падает, `apt install python3.12-venv` требует sudo |
 | PEP 668 (externally-managed-environment) | `pip install --user` заблокирован без `--break-system-packages` |
 | Нестабильная сеть до PyPI | таймауты `files.pythonhosted.org`, часть пакетов скачивалась с ретраями |
+| Зависание `pio run` на toolchain | непиненая `platform = espressif32` подтянула `toolchain-xtensa-esp-elf @ 14.2.0+20260121` (для C3 не нужен) и скачивание встало. Исправлено пином `platform = espressif32@^6.9.0`; на Windows нужно просто дать `pio run` докачать пакеты |
 | Ранее: пустой `~/.platformio` | PlatformIO Core не был установлен (было только расширение VS Code) |
 
 Обходной путь, который сработал: `pip install --target .piotools` + обёртка `pio.sh`.
