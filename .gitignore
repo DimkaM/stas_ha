@@ -7,6 +7,10 @@
 .vscode/launch.json
 .vscode/ipch
 
+# Local toolchain (installed with pip --target, see pio.sh)
+.piotools
+.venv
+
 # Secrets
 include/secrets.h
 
