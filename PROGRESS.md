@@ -158,6 +158,9 @@ stas_ha/
 ## 6. Как собрать и прошить
 
 ```powershell
+# 0. один раз на чистом клоне (sdkconfig не коммитится)
+.\idf.ps1 set-target esp32c3
+
 # всё через обёртку (сама активирует IDF и PATH)
 .\idf.ps1 build
 .\idf.ps1 -p COM6 flash

@@ -101,6 +101,9 @@ stas_ha/
 ## Быстрый старт (Windows)
 
 ```powershell
+# 0. один раз на чистом клоне: sdkconfig не коммитится, целевую плату надо задать
+.\idf.ps1 set-target esp32c3
+
 # 1. креды
 copy main\secrets.h.example main\secrets.h   # вписать SSID/пароль и адрес MQTT
 
